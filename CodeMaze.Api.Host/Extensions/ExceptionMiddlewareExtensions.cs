@@ -1,7 +1,9 @@
 ﻿using CodeMaze.Contracts;
 using CodeMaze.Entities.ErrorModel;
 using CodeMaze.Entities.Exceptions;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
 using System.Net;
 
 namespace CodeMaze.Api.Host.Extensions

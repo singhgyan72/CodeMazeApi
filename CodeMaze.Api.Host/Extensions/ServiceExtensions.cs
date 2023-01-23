@@ -1,18 +1,23 @@
-﻿using CodeMaze.Contracts;
+﻿using CodeMaze.Api.Controllers.ActionFilters;
+using CodeMaze.Contracts;
+using CodeMaze.Entities.Models;
+using CodeMaze.LoggerService;
 using CodeMaze.Repository;
 using CodeMaze.Services;
 using CodeMaze.Services.Contracts;
-using CodeMaze.LoggerService;
-using Microsoft.EntityFrameworkCore;
-using CodeMaze.Api.Controllers.ActionFilters;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
-using CodeMaze.Entities.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using Microsoft.OpenApi.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CodeMaze.Api.Host.Extensions
 {
